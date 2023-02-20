@@ -29,7 +29,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;/*Tudo que estiver fora da borda vai ficar escondido. neste caso a foto*/
 
     background-color: white;
@@ -40,6 +39,7 @@ section#login {
 
     transition: width .3s, heigth .3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -67,15 +67,38 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;/*Sem nescessidade porque uma DIV já é bloco*/
     width: 100%;/*Sem nescessidade porque ele já é uma DIV*/
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > span {
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #84ecdf;
+    font-size: 0.9em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12.4px);/*Sempre que tiver uma transoformação/animação, faça na ultima linha!*/
+}
+
+div.campo > input:focus-within /*parecido com HOVER mas funciona quando estou digitando*/ {
+    background-color: white;
 }
 
 form > input[type=submit] {
