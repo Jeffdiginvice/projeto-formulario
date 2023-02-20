@@ -52,10 +52,10 @@ section#login > div#imagem {
 
 section#login > div#formulario {
     display: block;
-    padding: 10px;
+    padding: 5px;
 }
 
-div#formulario {
+div#formulario h1 {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -63,4 +63,58 @@ div#formulario {
 div#formulario > p {
     font-size: 0.8em;
     text-align: justify;
+}
+
+form > div.campo {
+    background-color: #5f2c82;
+    display: block;/*Sem nescessidade porque uma DIV já é bloco*/
+    width: 100%;/*Sem nescessidade porque ele já é uma DIV*/
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width:  100%;
+    height: 40px;
+    background-color: #49a094;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 7px;
+    cursor: pointer;/*para quando passar em cima o ponteir do mouse virar uma mãozinha*/
+}
+
+form > input[type=submit]:hover {
+    background-color: #197064;
+    color: black;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width:  100%;
+    height: 40px;
+    padding-top: 5px;
+    background-color: white;
+    margin-top: 7px;
+    border: 1px solid #49a094;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+form > a.botao:hover {
+    background-color: #64d8c9;
+    color: black;
+}
+form > a.botao > i {
+    font-size: 0.8em;
 }
